@@ -2,7 +2,7 @@ operasBas.html{% extends "layout.html" %}
 
 {% block content %}
 
-    <form action="/resultado" method="post">
+    <form action="/operasBas" method="post">
         <div class="mb-3">
             <label for="n1" class="from-lable">Numero1</label>
             <input type="text" class="from-control" name="n1" id="1">
@@ -13,5 +13,7 @@ operasBas.html{% extends "layout.html" %}
         </div>
     <button class="btn btn-primary" type="submit">Calcular</button>
     </form>
+
+    <h1>la suma es {{res}}</h1>
 
 {% endblock %}

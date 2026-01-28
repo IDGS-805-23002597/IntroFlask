@@ -1,0 +1,24 @@
+{% macro datos (name, placeholder, type="text")%}
+
+ <div class="mb-3">
+            <label for="n{{name}}" class="form-lable">{{name}}</label>
+            <input type="text" class="form-control" name="{{name}}" id="{{name}}" 
+            placeholder="{{placeholder}}">
+        </div>
+
+{% endmacro%}
+
+{%macro campoNuevo(field)%}
+<td>{{field.label}}</td>
+<dd>{{field(**kwargs)| safe}}</dd>
+
+
+{%if field.errors %}
+    {%for error in field.errors%}
+        <li>{{error}}</li>
+    {%endfor%}
+
+
+{%endif%}
+
+{%endmacro%}

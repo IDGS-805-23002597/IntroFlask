@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h1>Usuarios</h1>
+{%import "_macros.html" as macros%}
+
+    <form action="/" method="post">
+      {{macros.datos("matrricula", "matricula", "number")}}  
+      {{macros.datos("nombre", "Nombre")}} 
+      {{macros.datos("contraseña", "contraseña", "password")}} 
+      {{macros.datos("correo", "correo", "email")}} 
+
+    <button class="btn btn-primary" type="submit">Guardar</button>
+    </form>
 {% endblock %}
